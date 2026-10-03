@@ -5,6 +5,9 @@ A flash card app for kindergarten (ages 3–6): **31 decks, 517 cards**.
 Play them on screen with three-pile sorting, or print them as fold-over A4 sheets to cut out
 for the classroom.
 
+**Live site:** <https://omartalukderweb.github.io/Kids-Flash-Card/> — hosted on GitHub Pages
+and redeployed automatically by `.github/workflows/pages.yml` on every push.
+
 ```bash
 python3 scripts/build.py   # regenerate flashcards/decks.js from decks.json (already done)
 python3 -m http.server 8000 --bind 0.0.0.0
