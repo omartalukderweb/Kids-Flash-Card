@@ -1,14 +1,67 @@
 # Kids Flash Card
 
-A flash card curriculum for kindergarten (ages 3–6): **31 decks, 517 cards**, organised by
-subject and difficulty level.
+A flash card app for kindergarten (ages 3–6): **31 decks, 517 cards**.
 
-The content lives in [`flashcards/decks.json`](flashcards/decks.json) — plain data, no build
-step, ready for an app, a print script, or a teacher's hand-cut card set.
+Play them on screen with three-pile sorting, or print them as fold-over A4 sheets to cut out
+for the classroom.
+
+```bash
+python3 scripts/build.py   # regenerate flashcards/decks.js from decks.json (already done)
+python3 -m http.server 8000 --bind 0.0.0.0
+# or: npm start
+```
+
+Then open <http://localhost:8000>. The app is plain HTML/CSS/JS with no framework and no
+build step — only Python 3 is needed to run it. `npm install` is only for the test suite.
+Because the card data is precompiled into `flashcards/decks.js`, you can also open `index.html`
+straight from the filesystem.
 
 ---
 
-## The list
+## What it does
+
+### ▶ Flash card player — three-pile sorting
+
+The classic method, built in. One card at a time; tap the card to reveal the answer, then sort
+it into one of three piles:
+
+| Pile | Meaning | Returns tomorrow? |
+|---|---|---|
+| 🟢 **Knows it** | No hesitation | No — retire it |
+| 🟠 **Almost** | Hesitated, or needed a hint | Yes |
+| 🔴 **New** | Didn't know it | Yes |
+
+At the end of a round you get a tally and a **"Go again — just the N missed"** button, so the
+next round is only the cards that need work. That shrinking loop is the whole point.
+
+Keyboard: <kbd>space</kbd> flip · <kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd> sort ·
+<kbd>u</kbd> undo · <kbd>esc</kbd> exit.
+
+Progress is saved in the browser (localStorage), so the library shows a per-deck mastery bar
+and "12 of 26 mastered · 19 seen". It survives closing the tab — useful for tracking a class
+over a term. Reset it any time from the footer.
+
+### 🖨 Print
+
+Pick any combination of decks, choose a layout, and print:
+
+- **Fold-over** (default) — the word on the top half, the answer on the bottom, with a dashed
+  fold line between. Cut, fold, done.
+- **Fronts only** — blank backs, for sticking on card stock or letting the children draw.
+- **4, 6 or 8 cards per page** — 4 gives the largest cards (~94 × 68 mm folded).
+- **New page per deck**, or pack tightly to save paper.
+
+A live preview shows the first page before you print. 517 cards at 4-per-page is 138 A4 pages,
+so print one deck at a time — a 12-card deck is 3 pages.
+
+### Library
+
+Every deck grouped by subject, searchable by deck name *or* by the words inside the cards
+(searching "zebra" finds Wild Animals).
+
+---
+
+## The card list
 
 Every deck has a `level` (1 = start here, 2 = next term, 3 = end of year) and a `cardFormat`
 describing what goes on the front and back of the card.
@@ -121,14 +174,24 @@ Both are edits to `decks.json` — no code involved.
 
 ## Development
 
-Validate the card data (JSON well-formed, required fields present, no duplicate cards inside a
-deck, no duplicate deck ids, prints per-deck counts):
+The app is static — no bundler, no framework. Card data lives in
+[`flashcards/decks.json`](flashcards/decks.json) and is compiled to `flashcards/decks.js` so the
+page works from `file://`, where a browser blocks `fetch()` of a local JSON file.
 
 ```bash
-python3 scripts/validate_decks.py
+npm run validate   # check decks.json
+npm run build      # validate, then regenerate flashcards/decks.js
+npm test           # build, then run the app's test suite
 ```
 
-Exits non-zero if anything is wrong.
+`decks.json` is the source of truth. **Edit it, then run `npm run build`** — the app reads the
+generated `decks.js`, not the JSON.
+
+### Validation
+
+`scripts/validate_decks.py` checks that the JSON parses, that every deck has its required
+fields, that there are no duplicate cards or deck ids, and that every card is a shape the app
+knows how to render. It exits non-zero on any failure.
 
 ### Adding a deck
 
@@ -145,5 +208,29 @@ Append an object to the `decks` array in `flashcards/decks.json`:
 }
 ```
 
-Cards may be plain strings or objects, whichever fits the deck. `id` must be unique; run the
-validator after editing.
+### Card shapes
+
+Cards are plain strings, or one of these four objects. `cardSides()` in `assets/app.js` maps
+each shape to a front/back pair, and the validator enforces this list — add a new shape to both
+places together, or it renders as `[object Object]`.
+
+| Shape | Front | Back |
+|---|---|---|
+| `"cat"` (string) | the word | the word + a draw box |
+| `{letter, sound, word}` | the letter | the keyword + its sound |
+| `{numeral, word}` | the numeral | the number word |
+| `{shape, example}` | the shape | the example |
+| `{pair: [a, b]}` | `a` | `b` — "the opposite" |
+
+### Tests
+
+`tests/app.test.mjs` boots the real `assets/app.js` inside jsdom and exercises the shipped code
+paths — not a reimplementation:
+
+- library and deck views render all 31 decks and all 517 cards, with no `[object Object]`
+- the player flips, sorts into all three piles, undoes, and reaches the results screen
+- mastery writes to localStorage and is restored on a fresh page load
+- print builds A4 pages for every card, at 4/6/8 per page, in both layouts
+
+Run with `npm test`.
+

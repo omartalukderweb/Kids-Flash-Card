@@ -1,0 +1,1172 @@
+// GENERATED FILE — do not edit by hand.
+// Source of truth: flashcards/decks.json
+// Regenerate with:  python3 scripts/build.py
+window.FLASHCARD_DECKS = {
+  "meta": {
+    "name": "Kindergarten Flash Card Curriculum",
+    "ageRange": "3-6 years",
+    "version": "1.0.0",
+    "notes": "Front of card = prompt (image or letter). Back of card = word + spoken label. Every card is designed to be spoken aloud, not read silently."
+  },
+  "decks": [
+    {
+      "id": "alphabet-upper",
+      "name": "Alphabet — Uppercase",
+      "category": "Literacy",
+      "level": 1,
+      "cardFormat": {
+        "front": "single letter",
+        "back": "letter name + a keyword picture"
+      },
+      "cards": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ]
+    },
+    {
+      "id": "alphabet-lower",
+      "name": "Alphabet — Lowercase",
+      "category": "Literacy",
+      "level": 1,
+      "cardFormat": {
+        "front": "single letter",
+        "back": "letter name"
+      },
+      "cards": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    {
+      "id": "letter-sounds",
+      "name": "Letter Sounds (a as in apple)",
+      "category": "Literacy",
+      "level": 1,
+      "cardFormat": {
+        "front": "letter",
+        "back": "short sound + picture of keyword"
+      },
+      "cards": [
+        {
+          "letter": "A",
+          "sound": "/a/",
+          "word": "apple"
+        },
+        {
+          "letter": "B",
+          "sound": "/b/",
+          "word": "ball"
+        },
+        {
+          "letter": "C",
+          "sound": "/k/",
+          "word": "cat"
+        },
+        {
+          "letter": "D",
+          "sound": "/d/",
+          "word": "dog"
+        },
+        {
+          "letter": "E",
+          "sound": "/e/",
+          "word": "egg"
+        },
+        {
+          "letter": "F",
+          "sound": "/f/",
+          "word": "fish"
+        },
+        {
+          "letter": "G",
+          "sound": "/g/",
+          "word": "goat"
+        },
+        {
+          "letter": "H",
+          "sound": "/h/",
+          "word": "hat"
+        },
+        {
+          "letter": "I",
+          "sound": "/i/",
+          "word": "igloo"
+        },
+        {
+          "letter": "J",
+          "sound": "/j/",
+          "word": "jam"
+        },
+        {
+          "letter": "K",
+          "sound": "/k/",
+          "word": "kite"
+        },
+        {
+          "letter": "L",
+          "sound": "/l/",
+          "word": "lion"
+        },
+        {
+          "letter": "M",
+          "sound": "/m/",
+          "word": "moon"
+        },
+        {
+          "letter": "N",
+          "sound": "/n/",
+          "word": "nest"
+        },
+        {
+          "letter": "O",
+          "sound": "/o/",
+          "word": "octopus"
+        },
+        {
+          "letter": "P",
+          "sound": "/p/",
+          "word": "pen"
+        },
+        {
+          "letter": "Q",
+          "sound": "/kw/",
+          "word": "queen"
+        },
+        {
+          "letter": "R",
+          "sound": "/r/",
+          "word": "rat"
+        },
+        {
+          "letter": "S",
+          "sound": "/s/",
+          "word": "sun"
+        },
+        {
+          "letter": "T",
+          "sound": "/t/",
+          "word": "top"
+        },
+        {
+          "letter": "U",
+          "sound": "/u/",
+          "word": "umbrella"
+        },
+        {
+          "letter": "V",
+          "sound": "/v/",
+          "word": "van"
+        },
+        {
+          "letter": "W",
+          "sound": "/w/",
+          "word": "water"
+        },
+        {
+          "letter": "X",
+          "sound": "/ks/",
+          "word": "box"
+        },
+        {
+          "letter": "Y",
+          "sound": "/y/",
+          "word": "yo-yo"
+        },
+        {
+          "letter": "Z",
+          "sound": "/z/",
+          "word": "zebra"
+        }
+      ]
+    },
+    {
+      "id": "cvc-words",
+      "name": "First Words to Blend (CVC)",
+      "category": "Literacy",
+      "level": 2,
+      "cardFormat": {
+        "front": "word",
+        "back": "picture"
+      },
+      "cards": [
+        "cat",
+        "hat",
+        "mat",
+        "sat",
+        "rat",
+        "bat",
+        "fan",
+        "man",
+        "pan",
+        "van",
+        "dog",
+        "log",
+        "pig",
+        "dig",
+        "big",
+        "wig",
+        "cup",
+        "bus",
+        "sun",
+        "run",
+        "fun",
+        "bed",
+        "red",
+        "hen",
+        "pen",
+        "ten",
+        "net",
+        "jet",
+        "map",
+        "cap",
+        "lip",
+        "hop",
+        "top",
+        "mop",
+        "fox",
+        "box",
+        "six",
+        "jam",
+        "web",
+        "zip"
+      ]
+    },
+    {
+      "id": "sight-words-preprimer",
+      "name": "Sight Words — Pre-Primer (Dolch 40)",
+      "category": "Literacy",
+      "level": 2,
+      "cardFormat": {
+        "front": "word",
+        "back": "word in a spoken sentence"
+      },
+      "cards": [
+        "a",
+        "and",
+        "away",
+        "big",
+        "blue",
+        "can",
+        "come",
+        "down",
+        "find",
+        "for",
+        "funny",
+        "go",
+        "help",
+        "here",
+        "I",
+        "in",
+        "is",
+        "it",
+        "jump",
+        "little",
+        "look",
+        "make",
+        "me",
+        "my",
+        "not",
+        "one",
+        "play",
+        "red",
+        "run",
+        "said",
+        "see",
+        "the",
+        "three",
+        "to",
+        "two",
+        "up",
+        "we",
+        "where",
+        "yellow",
+        "you"
+      ]
+    },
+    {
+      "id": "sight-words-primer",
+      "name": "Sight Words — Primer (Dolch 52)",
+      "category": "Literacy",
+      "level": 3,
+      "cardFormat": {
+        "front": "word",
+        "back": "word in a spoken sentence"
+      },
+      "cards": [
+        "all",
+        "am",
+        "are",
+        "at",
+        "ate",
+        "be",
+        "black",
+        "brown",
+        "but",
+        "came",
+        "did",
+        "do",
+        "eat",
+        "four",
+        "get",
+        "good",
+        "have",
+        "he",
+        "into",
+        "like",
+        "must",
+        "new",
+        "no",
+        "now",
+        "on",
+        "our",
+        "out",
+        "please",
+        "pretty",
+        "ran",
+        "ride",
+        "saw",
+        "say",
+        "she",
+        "so",
+        "soon",
+        "that",
+        "there",
+        "they",
+        "this",
+        "too",
+        "under",
+        "want",
+        "was",
+        "well",
+        "went",
+        "what",
+        "white",
+        "who",
+        "will",
+        "with",
+        "yes"
+      ]
+    },
+    {
+      "id": "numbers-1-10",
+      "name": "Numbers 1-10",
+      "category": "Numeracy",
+      "level": 1,
+      "cardFormat": {
+        "front": "numeral",
+        "back": "number word + that many dots"
+      },
+      "cards": [
+        {
+          "numeral": "1",
+          "word": "one"
+        },
+        {
+          "numeral": "2",
+          "word": "two"
+        },
+        {
+          "numeral": "3",
+          "word": "three"
+        },
+        {
+          "numeral": "4",
+          "word": "four"
+        },
+        {
+          "numeral": "5",
+          "word": "five"
+        },
+        {
+          "numeral": "6",
+          "word": "six"
+        },
+        {
+          "numeral": "7",
+          "word": "seven"
+        },
+        {
+          "numeral": "8",
+          "word": "eight"
+        },
+        {
+          "numeral": "9",
+          "word": "nine"
+        },
+        {
+          "numeral": "10",
+          "word": "ten"
+        }
+      ]
+    },
+    {
+      "id": "numbers-11-20",
+      "name": "Numbers 11-20",
+      "category": "Numeracy",
+      "level": 2,
+      "cardFormat": {
+        "front": "numeral",
+        "back": "number word"
+      },
+      "cards": [
+        {
+          "numeral": "11",
+          "word": "eleven"
+        },
+        {
+          "numeral": "12",
+          "word": "twelve"
+        },
+        {
+          "numeral": "13",
+          "word": "thirteen"
+        },
+        {
+          "numeral": "14",
+          "word": "fourteen"
+        },
+        {
+          "numeral": "15",
+          "word": "fifteen"
+        },
+        {
+          "numeral": "16",
+          "word": "sixteen"
+        },
+        {
+          "numeral": "17",
+          "word": "seventeen"
+        },
+        {
+          "numeral": "18",
+          "word": "eighteen"
+        },
+        {
+          "numeral": "19",
+          "word": "nineteen"
+        },
+        {
+          "numeral": "20",
+          "word": "twenty"
+        }
+      ]
+    },
+    {
+      "id": "counting-groups",
+      "name": "Count the Objects (1-10)",
+      "category": "Numeracy",
+      "level": 1,
+      "cardFormat": {
+        "front": "a picture of N objects",
+        "back": "the numeral"
+      },
+      "cards": [
+        "1 star",
+        "2 apples",
+        "3 ducks",
+        "4 cars",
+        "5 fish",
+        "6 flowers",
+        "7 bees",
+        "8 balloons",
+        "9 blocks",
+        "10 toes"
+      ]
+    },
+    {
+      "id": "shapes",
+      "name": "Shapes",
+      "category": "Concepts",
+      "level": 1,
+      "cardFormat": {
+        "front": "shape",
+        "back": "name + a real-world example"
+      },
+      "cards": [
+        {
+          "shape": "circle",
+          "example": "a wheel"
+        },
+        {
+          "shape": "square",
+          "example": "a window"
+        },
+        {
+          "shape": "triangle",
+          "example": "a slice of pizza"
+        },
+        {
+          "shape": "rectangle",
+          "example": "a door"
+        },
+        {
+          "shape": "oval",
+          "example": "an egg"
+        },
+        {
+          "shape": "star",
+          "example": "a star in the sky"
+        },
+        {
+          "shape": "heart",
+          "example": "a heart on a card"
+        },
+        {
+          "shape": "diamond",
+          "example": "a kite"
+        },
+        {
+          "shape": "cube",
+          "example": "a dice"
+        },
+        {
+          "shape": "sphere",
+          "example": "a ball"
+        },
+        {
+          "shape": "cylinder",
+          "example": "a can"
+        },
+        {
+          "shape": "cone",
+          "example": "an ice cream cone"
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "name": "Colors",
+      "category": "Concepts",
+      "level": 1,
+      "cardFormat": {
+        "front": "color swatch",
+        "back": "color name + an object of that color"
+      },
+      "cards": [
+        "red",
+        "blue",
+        "yellow",
+        "green",
+        "orange",
+        "purple",
+        "pink",
+        "brown",
+        "black",
+        "white",
+        "grey"
+      ]
+    },
+    {
+      "id": "opposites",
+      "name": "Opposites",
+      "category": "Concepts",
+      "level": 2,
+      "cardFormat": {
+        "front": "two pictures side by side",
+        "back": "the two words"
+      },
+      "cards": [
+        {
+          "pair": [
+            "big",
+            "small"
+          ]
+        },
+        {
+          "pair": [
+            "hot",
+            "cold"
+          ]
+        },
+        {
+          "pair": [
+            "up",
+            "down"
+          ]
+        },
+        {
+          "pair": [
+            "in",
+            "out"
+          ]
+        },
+        {
+          "pair": [
+            "fast",
+            "slow"
+          ]
+        },
+        {
+          "pair": [
+            "happy",
+            "sad"
+          ]
+        },
+        {
+          "pair": [
+            "day",
+            "night"
+          ]
+        },
+        {
+          "pair": [
+            "wet",
+            "dry"
+          ]
+        },
+        {
+          "pair": [
+            "open",
+            "closed"
+          ]
+        },
+        {
+          "pair": [
+            "full",
+            "empty"
+          ]
+        },
+        {
+          "pair": [
+            "clean",
+            "dirty"
+          ]
+        },
+        {
+          "pair": [
+            "near",
+            "far"
+          ]
+        },
+        {
+          "pair": [
+            "loud",
+            "quiet"
+          ]
+        },
+        {
+          "pair": [
+            "heavy",
+            "light"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "position-words",
+      "name": "Position Words",
+      "category": "Concepts",
+      "level": 2,
+      "cardFormat": {
+        "front": "a toy in relation to a box",
+        "back": "the word"
+      },
+      "cards": [
+        "on",
+        "under",
+        "in",
+        "beside",
+        "behind",
+        "in front of",
+        "between",
+        "above",
+        "below",
+        "next to"
+      ]
+    },
+    {
+      "id": "compare-measure",
+      "name": "Comparing & Measuring",
+      "category": "Concepts",
+      "level": 3,
+      "cardFormat": {
+        "front": "two objects",
+        "back": "the comparison word"
+      },
+      "cards": [
+        "bigger / smaller",
+        "taller / shorter",
+        "longer / shorter",
+        "more / less",
+        "same / different",
+        "heavier / lighter"
+      ]
+    },
+    {
+      "id": "patterns-time",
+      "name": "Patterns, Time & Sequences",
+      "category": "Concepts",
+      "level": 3,
+      "cardFormat": {
+        "front": "sequence with one blank",
+        "back": "what comes next"
+      },
+      "cards": [
+        "red-blue-red-blue-?",
+        "circle-square-circle-?",
+        "morning / afternoon / evening",
+        "yesterday / today / tomorrow",
+        "before / after",
+        "first / next / last",
+        "days of the week",
+        "the seasons"
+      ]
+    },
+    {
+      "id": "body-parts",
+      "name": "My Body",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "picture of the part",
+        "back": "the word"
+      },
+      "cards": [
+        "head",
+        "hair",
+        "eye",
+        "ear",
+        "nose",
+        "mouth",
+        "teeth",
+        "tongue",
+        "neck",
+        "shoulder",
+        "arm",
+        "elbow",
+        "hand",
+        "finger",
+        "tummy",
+        "leg",
+        "knee",
+        "foot",
+        "toe"
+      ]
+    },
+    {
+      "id": "family-people",
+      "name": "People & Family",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "picture",
+        "back": "the word"
+      },
+      "cards": [
+        "mother",
+        "father",
+        "baby",
+        "brother",
+        "sister",
+        "grandmother",
+        "grandfather",
+        "boy",
+        "girl",
+        "man",
+        "woman",
+        "friend",
+        "teacher",
+        "uncle"
+      ]
+    },
+    {
+      "id": "community-helpers",
+      "name": "Community Helpers",
+      "category": "Vocabulary",
+      "level": 2,
+      "cardFormat": {
+        "front": "person in uniform with tools",
+        "back": "job + what they do"
+      },
+      "cards": [
+        "doctor",
+        "nurse",
+        "teacher",
+        "police officer",
+        "firefighter",
+        "farmer",
+        "postman",
+        "driver",
+        "baker",
+        "tailor",
+        "carpenter",
+        "vet"
+      ]
+    },
+    {
+      "id": "animals-farm",
+      "name": "Farm Animals",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "animal",
+        "back": "name + the sound it makes"
+      },
+      "cards": [
+        "cow",
+        "sheep",
+        "goat",
+        "horse",
+        "pig",
+        "hen",
+        "rooster",
+        "duck",
+        "dog",
+        "cat",
+        "donkey",
+        "rabbit"
+      ]
+    },
+    {
+      "id": "animals-wild",
+      "name": "Wild Animals",
+      "category": "Vocabulary",
+      "level": 2,
+      "cardFormat": {
+        "front": "animal",
+        "back": "name + the sound or one fact"
+      },
+      "cards": [
+        "lion",
+        "tiger",
+        "elephant",
+        "monkey",
+        "zebra",
+        "giraffe",
+        "bear",
+        "deer",
+        "fox",
+        "kangaroo",
+        "hippo",
+        "rhino"
+      ]
+    },
+    {
+      "id": "animals-other",
+      "name": "Pets, Birds, Sea & Bugs",
+      "category": "Vocabulary",
+      "level": 2,
+      "cardFormat": {
+        "front": "animal",
+        "back": "name"
+      },
+      "cards": [
+        "fish",
+        "whale",
+        "shark",
+        "crab",
+        "turtle",
+        "parrot",
+        "crow",
+        "sparrow",
+        "peacock",
+        "butterfly",
+        "bee",
+        "ant",
+        "spider",
+        "ladybug"
+      ]
+    },
+    {
+      "id": "food-drink",
+      "name": "Food & Drink",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "food",
+        "back": "name"
+      },
+      "cards": [
+        "apple",
+        "banana",
+        "orange",
+        "mango",
+        "grapes",
+        "watermelon",
+        "rice",
+        "bread",
+        "egg",
+        "milk",
+        "water",
+        "cake",
+        "ice cream",
+        "carrot",
+        "potato"
+      ]
+    },
+    {
+      "id": "clothes",
+      "name": "Clothes",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "clothing item",
+        "back": "name"
+      },
+      "cards": [
+        "shirt",
+        "pants",
+        "dress",
+        "skirt",
+        "shoes",
+        "socks",
+        "hat",
+        "jacket",
+        "sweater",
+        "scarf",
+        "gloves"
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "vehicle",
+        "back": "name + the sound it makes"
+      },
+      "cards": [
+        "car",
+        "bus",
+        "truck",
+        "train",
+        "boat",
+        "ship",
+        "airplane",
+        "helicopter",
+        "bicycle",
+        "motorcycle",
+        "ambulance",
+        "fire truck"
+      ]
+    },
+    {
+      "id": "home-school-things",
+      "name": "Things at Home & School",
+      "category": "Vocabulary",
+      "level": 1,
+      "cardFormat": {
+        "front": "object",
+        "back": "name"
+      },
+      "cards": [
+        "book",
+        "pencil",
+        "crayon",
+        "bag",
+        "chair",
+        "table",
+        "bed",
+        "cup",
+        "plate",
+        "spoon",
+        "door",
+        "window",
+        "ball",
+        "doll",
+        "blocks"
+      ]
+    },
+    {
+      "id": "nature-weather",
+      "name": "Nature, Weather & Seasons",
+      "category": "Vocabulary",
+      "level": 2,
+      "cardFormat": {
+        "front": "picture",
+        "back": "name"
+      },
+      "cards": [
+        "sun",
+        "moon",
+        "star",
+        "cloud",
+        "rain",
+        "rainbow",
+        "wind",
+        "snow",
+        "tree",
+        "flower",
+        "leaf",
+        "grass",
+        "hot day",
+        "cold day",
+        "rainy day"
+      ]
+    },
+    {
+      "id": "feelings",
+      "name": "Feelings",
+      "category": "Social-Emotional",
+      "level": 2,
+      "cardFormat": {
+        "front": "a face showing the feeling",
+        "back": "name + 'I feel ___ when...'"
+      },
+      "cards": [
+        "happy",
+        "sad",
+        "angry",
+        "scared",
+        "surprised",
+        "tired",
+        "sick",
+        "hungry",
+        "thirsty",
+        "excited",
+        "shy",
+        "proud"
+      ]
+    },
+    {
+      "id": "actions",
+      "name": "Action Words",
+      "category": "Social-Emotional",
+      "level": 2,
+      "cardFormat": {
+        "front": "a child doing the action",
+        "back": "the word, then the class does it"
+      },
+      "cards": [
+        "run",
+        "jump",
+        "clap",
+        "hop",
+        "sing",
+        "dance",
+        "draw",
+        "read",
+        "eat",
+        "drink",
+        "sleep",
+        "wash",
+        "throw",
+        "catch",
+        "kick",
+        "hug"
+      ]
+    },
+    {
+      "id": "manners-safety",
+      "name": "Good Manners & Safety",
+      "category": "Social-Emotional",
+      "level": 3,
+      "cardFormat": {
+        "front": "situation picture",
+        "back": "what to say or do"
+      },
+      "cards": [
+        "please",
+        "thank you",
+        "sorry",
+        "excuse me",
+        "hello",
+        "goodbye",
+        "may I",
+        "sharing",
+        "waiting your turn",
+        "washing hands",
+        "no touching hot things",
+        "holding hands while crossing",
+        "staying with your teacher",
+        "saying no to a stranger"
+      ]
+    },
+    {
+      "id": "daily-routine",
+      "name": "My Day",
+      "category": "Social-Emotional",
+      "level": 3,
+      "cardFormat": {
+        "front": "picture of the routine step",
+        "back": "the word, in order"
+      },
+      "cards": [
+        "wake up",
+        "brush my teeth",
+        "wash my face",
+        "get dressed",
+        "eat breakfast",
+        "go to school",
+        "play",
+        "eat lunch",
+        "nap",
+        "go home",
+        "bath",
+        "read a story",
+        "go to sleep"
+      ]
+    },
+    {
+      "id": "sounds-loud-soft",
+      "name": "Sounds We Hear",
+      "category": "Listening",
+      "level": 1,
+      "cardFormat": {
+        "front": "picture of the source",
+        "back": "the sound word"
+      },
+      "cards": [
+        "bell — ding dong",
+        "door — knock knock",
+        "dog — woof woof",
+        "cat — meow",
+        "cow — moo",
+        "car — beep beep",
+        "train — choo choo",
+        "clock — tick tock",
+        "rain — drip drip",
+        "bird — tweet tweet"
+      ]
+    }
+  ]
+};

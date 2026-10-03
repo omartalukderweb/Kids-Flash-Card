@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kids Flash Cards</title>
+<meta name="description" content="Flash card player and printable card sheets for kindergarten.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🃏</text></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="brand" id="brandBtn" title="Back to all decks">
+    <span class="brand-mark" aria-hidden="true">🃏</span>
+    <span class="brand-text">Kids Flash Cards</span>
+  </button>
+  <nav class="topnav">
+    <button class="nav-btn" data-view="library">Library</button>
+    <button class="nav-btn" data-view="print">Print</button>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<footer class="foot">
+  <span id="footStats"></span>
+  <button class="link-btn" id="resetProgress">Reset saved progress</button>
+</footer>
+
+<!-- PRINT LAYER: only this is visible when printing -->
+<div id="printRoot" aria-hidden="true"></div>
+
+<script src="flashcards/decks.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -2,7 +2,8 @@
 """Validate flashcards/decks.json.
 
 Checks: valid JSON, required fields, no duplicate cards inside a deck,
-and reports card counts per deck. Exit code 1 on any failure.
+no duplicate deck ids, that every card is a shape assets/app.js knows how to
+render, and reports card counts per deck. Exit code 1 on any failure.
 """
 import collections
 import json
@@ -13,12 +14,31 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PATH = os.path.join(ROOT, "flashcards", "decks.json")
 REQUIRED = ("id", "name", "category", "level", "cards")
 
+# Must stay in sync with cardSides() in assets/app.js.
+# Any card shape not listed here renders as "[object Object]" in the app.
+CARD_SHAPES = (
+    frozenset(),                              # plain string
+    frozenset({"letter", "sound", "word"}),
+    frozenset({"numeral", "word"}),
+    frozenset({"shape", "example"}),
+    frozenset({"pair"}),
+)
+
 
 def card_key(card):
     """Stable, hashable identity for a card."""
     if isinstance(card, dict):
         return json.dumps(card, sort_keys=True)
     return json.dumps(card)
+
+
+def shape_ok(card):
+    """True if assets/app.js has a rendering branch for this card."""
+    if isinstance(card, str):
+        return bool(card.strip())
+    if not isinstance(card, dict):
+        return False
+    return frozenset(card.keys()) in CARD_SHAPES
 
 
 def main():
@@ -53,6 +73,18 @@ def main():
         dupes = sorted(w for w, c in collections.Counter(keys).items() if c > 1)
         if dupes:
             errors.append(f"deck {deck['id']} duplicate cards: {dupes}")
+
+        for c in deck["cards"]:
+            if not shape_ok(c):
+                errors.append(
+                    f"deck {deck['id']} has a card shape assets/app.js cannot render: {c!r}"
+                )
+                continue
+            if isinstance(c, dict) and "pair" in c:
+                if not isinstance(c["pair"], list) or len(c["pair"]) != 2:
+                    errors.append(
+                        f"deck {deck['id']} pair card needs exactly 2 items: {c['pair']!r}"
+                    )
 
     print("-" * 73)
     print(f"{len(decks)} decks, {total} cards")
