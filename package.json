@@ -1,0 +1,16 @@
+{
+  "name": "kids-flash-card",
+  "version": "1.0.0",
+  "description": "Kindergarten flash card curriculum with a printable card generator and a three-pile flash card player.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "validate": "python3 scripts/validate_decks.py",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "start": "python3 -m http.server 8000 --bind 0.0.0.0"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.1"
+  }
+}

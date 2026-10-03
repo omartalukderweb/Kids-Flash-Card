@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+# Deploys the static site with no build step — the app is plain HTML/CSS/JS.
+# flashcards/decks.js is committed, so nothing needs to be generated here.
+
+on:
+  push:
+    branches:
+      - main
+      - arena/01a1025f-kids-flash-card   # so Pages can deploy before this is merged
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify card data is in sync
+        run: python3 scripts/validate_decks.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
